@@ -1,0 +1,9 @@
+overwrite: true
+schema: '${NEXT_PUBLIC_SERVICE_URL}'
+documents: 'src/graphql/queries.gql'
+generates:
+  src/generated/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typed-document-node'

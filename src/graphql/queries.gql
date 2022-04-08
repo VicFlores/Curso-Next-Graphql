@@ -1,0 +1,26 @@
+fragment Avocado on Avocado {
+  _id
+  image
+  name
+  createdAt
+  sku
+  price
+  attributes {
+    description
+    taste
+    shape
+    hardiness
+  }
+}
+
+query avos {
+  avos {
+    ...Avocado
+  }
+}
+
+query Avo($id: ID!) {
+  avo(_id: $id) {
+    ...Avocado
+  }
+}
